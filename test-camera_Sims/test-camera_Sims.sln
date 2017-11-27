@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-camera_Sims", "test-camera_Sims.csproj", "{22EE295D-F4CD-4056-7902-2797D8B4AEF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-camera_Sims.Plugins", "test-camera_Sims.Plugins.csproj", "{7229EC36-12AD-3793-459C-50F16C2C2729}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-camera_Sims.Editor.Plugins", "test-camera_Sims.Editor.Plugins.csproj", "{18CBD374-8210-6587-B686-74F46B00C255}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{22EE295D-F4CD-4056-7902-2797D8B4AEF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22EE295D-F4CD-4056-7902-2797D8B4AEF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22EE295D-F4CD-4056-7902-2797D8B4AEF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7229EC36-12AD-3793-459C-50F16C2C2729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7229EC36-12AD-3793-459C-50F16C2C2729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7229EC36-12AD-3793-459C-50F16C2C2729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7229EC36-12AD-3793-459C-50F16C2C2729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18CBD374-8210-6587-B686-74F46B00C255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18CBD374-8210-6587-B686-74F46B00C255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18CBD374-8210-6587-B686-74F46B00C255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18CBD374-8210-6587-B686-74F46B00C255}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,8 +8,8 @@ public class SwitchCamera : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		cameraFly.enabled = false;
-		camera1st.enabled = true;
+		cameraFly.enabled = true;
+		camera1st.enabled = false;
 	}
 	
 	// Update is called once per frame

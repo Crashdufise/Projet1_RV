@@ -42,6 +42,7 @@ public class rotate : MonoBehaviour
 			transform.eulerAngles = new Vector3(rotX, transform.eulerAngles.y, transform.eulerAngles.z);
 		}
 
+
 		transform.Translate(0, Input.GetAxis("Mouse ScrollWheel") * speedZoom2 * Time.deltaTime, 0, Space.World);
 		transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 0, maxValY), transform.position.z);
 	}
