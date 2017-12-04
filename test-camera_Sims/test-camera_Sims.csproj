@@ -219,6 +219,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CacherBoutons.cs" />
+    <Compile Include="Assets\CamSurveillance.cs" />
+    <Compile Include="Assets\FloorChange.cs" />
+    <Compile Include="Assets\HideWalls.cs" />
     <Compile Include="Assets\rotate.cs" />
     <Compile Include="Assets\SwitchCamera.cs" />
   </ItemGroup>

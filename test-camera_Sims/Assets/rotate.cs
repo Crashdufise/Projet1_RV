@@ -16,6 +16,9 @@ public class rotate : MonoBehaviour
 	int sens = 1; // 0:rien -1:gauche 1:droite
 	private float maxValY; // la hauteur max que peut atteindre le bloc Caméra
 
+	private FloorChange flrUp;
+	public float hisHighness;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -32,18 +35,20 @@ public class rotate : MonoBehaviour
 
 		float rotX = Mathf.Clamp(transform.eulerAngles.x + Input.GetAxis("Mouse ScrollWheel") * speedZoom1, 30, 90);
 		transform.eulerAngles = new Vector3(rotX, transform.eulerAngles.y, transform.eulerAngles.z);
+
+		flrUp = GameObject.Find("maison").GetComponent<FloorChange>();
+		hisHighness = flrUp.pos;
 	}
 
 	void zoom()
 	{
-		if (transform.position.y < valMinY)
+		if (transform.position.y < valMinY + hisHighness * maison.GetComponent<Renderer>().bounds.size.y)
 		{
 			float rotX = Mathf.Clamp(transform.eulerAngles.x + Input.GetAxis("Mouse ScrollWheel") * speedZoom1, 30, 90);
 			transform.eulerAngles = new Vector3(rotX, transform.eulerAngles.y, transform.eulerAngles.z);
 		}
 
 		transform.Translate(0, Input.GetAxis("Mouse ScrollWheel") * speedZoom2 * Time.deltaTime, 0, Space.World);
-		transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 0, maxValY), transform.position.z);
 	}
 
 	void rotManu()
@@ -70,10 +75,6 @@ public class rotate : MonoBehaviour
 		{
 			sens = 0;
 		}
-		if (Input.GetAxis("Mouse ScrollWheel") > 0f)
-		{
-			Debug.Log("Scroll");
-		}
 		transform.RotateAround(transform.position, Vector3.up, sens * speedAuto * Time.deltaTime);
 	}
 
@@ -87,5 +88,10 @@ public class rotate : MonoBehaviour
 			if (isManu) { rotManu(); }
 			if (!isManu) { rotAuto(); }
 			if (Input.GetAxis("Mouse ScrollWheel") != 0) { zoom(); }
+
+			hisHighness = flrUp.pos;
+
+			transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, hisHighness * maison.GetComponent<Renderer>().bounds.size.y, maxValY + hisHighness * maison.GetComponent<Renderer>().bounds.size.y), transform.position.z);
+			
 	}
 }
